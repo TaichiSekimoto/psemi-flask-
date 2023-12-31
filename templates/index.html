@@ -23,6 +23,7 @@
  <h2>タイトル : {{ task.title }}</h2> 
  <p>詳細 : {{ task.details }}</p>
  <a href="/delete/{{ task.id }}" role="button">Delete</a> 
+ <a href="/update/{{ task.id }}" role="button">Update</a> 
 {% endfor %}
 
 {% endblock %}
