@@ -6,6 +6,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<link rel="stylesheet" href="static/style.css">
 <a href="/create" role="button">CREATE NEW TASK</a>
 
 
@@ -23,6 +24,7 @@
  <h2>タイトル : {{ task.title }}</h2> 
  <p>詳細 : {{ task.details }}</p>
  <a href="/delete/{{ task.id }}" role="button">Delete</a> 
+ <a href="/update/{{ task.id }}" role="button">Update</a> 
 {% endfor %}
 
 {% endblock %}

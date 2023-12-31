@@ -2,21 +2,17 @@
 
 {% block body %}
 <h2>編集</h2>
-
+<link rel="stylesheet" href="static/style.css">
 
 <div class="form">
-    <form action="/create" method="POST">
+    <form action="/update/{{ task.id }}" method="POST">
       <label for="title">Title</label>
       <input type="text" name="title" />
+      <br>
       <label for="details">Details</label>
       <input type="text" name="details" />
-      <input type="submit" value="Create" />
+      <input type="submit" value="update" />
     </form>
 </div> 
-{% comment %} 
-TODO:
-タスク編集用のフォームを作成する
-index.htmlのフォームを参考にする
-action属性,method属性、inputタグのvalue属性に注意する
-{% endcomment %}
+
 {% endblock %}
